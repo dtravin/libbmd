@@ -15,9 +15,9 @@ Build
 You need autotools, recent Decklink drivers and library and, optionally, 
 Libav for the test programs. 
 
-   ./configure --with-sdkdir=/path/to/the/sdk/include
-   make
-   make install
+    ./configure --with-sdkdir=/path/to/the/sdk/include
+    make
+    make install
 
 Integration with Libav
 ----------------------
