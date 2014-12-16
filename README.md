@@ -12,10 +12,10 @@ are provided. bmdcapture.cpp and the other tools will be converted later.
 Build
 -----
 
-You need autotools, recent Decklink drivers and library and, optionally, 
+You need CMake, recent Decklink drivers and library and, optionally, 
 Libav for the test programs. 
-
-    ./configure --with-sdkdir=/path/to/the/sdk/include
+    mkdir build && cd build
+    cmake .. -DBUILD_TOOLS=ON -DLIBAV_ROOT_DIR=/path/to/libav -DSDK_DIR=/path/to/bmdsdk/Linux/include
     make
     make install
 
