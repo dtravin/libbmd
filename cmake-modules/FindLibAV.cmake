@@ -65,8 +65,8 @@ FIND_PATH (LIBAV_INCLUDE_DIR
         libavutil/avutil.h
         libswscale/swscale.h
   HINTS ${LIBAV_ROOT_DIR}
- PATH_SUFFIXES include
- DOC "LibAV include directory")
+  PATH_SUFFIXES include
+  DOC "LibAV include directory")
 
 if (NOT LibAV_FIND_COMPONENTS)
   set (LibAV_FIND_COMPONENTS avcodec avdevice avfilter avformat avutil swscale)
@@ -81,6 +81,9 @@ FOREACH (_LIBAV_COMPONENT ${LibAV_FIND_COMPONENTS})
     HINTS ${LIBAV_ROOT_DIR}
     PATH_SUFFIXES bin lib
     DOC "LibAV ${_LIBAV_COMPONENT} library")
+
+
+MESSAGE(STATUS "xxx" ${_LIBAV_LIBRARY_BASE} "=" ${${_LIBAV_LIBRARY_BASE}})
 
   MARK_AS_ADVANCED (${_LIBAV_LIBRARY_BASE})
 

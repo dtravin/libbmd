@@ -11,6 +11,12 @@ are provided. bmdcapture.cpp and the other tools will be converted later.
 
 Build
 -----
+Build Libav
+./configure --prefix=/home/dtravin/libs/libav_zero/build --enable-shared --enable-debug= --enable-x11grab --enable-gpl --enable-pic  --extra-cflags="-fPIC" --disable-static
+
+Build libbmd
+cmake -DBUILD_TOOLS=1  -DDeckLinkSDK_PATH=/home/dtravin/cvi/sdk/Linux/include/ -DLIBAV_ROOT_DIR=/home/dtravin/libs/libav_zero/build/ ..
+
 
 You need CMake, recent Decklink drivers and library and, optionally, 
 Libav for the test programs. 
